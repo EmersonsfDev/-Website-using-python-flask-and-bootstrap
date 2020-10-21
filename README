@@ -1,0 +1,21 @@
+criar Virtualenv---------
+
+	pip install virtualenv
+	virtualenv venv
+
+Ativar------
+
+	source venv/bin/activate
+
+Instalar dependencias--
+	
+ 	 pip install -r requirements.txt 
+
+executar----
+	
+	python3 run.py runserver
+
+
+
+
+

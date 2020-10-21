@@ -1,0 +1,59 @@
+
+{%extends 'blogpostbase.html'%}
+
+{%block blog%}
+     
+        <img src="{{url_for('static',filename='img/cpbi.jpg')}}"border-radius: 50%; width="100%" height="200"id ="box"> 
+      
+        <!-- Title -->
+        <h1 class="mt-4">Conhece o Power BI?</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+         <a href="https://blog.grancursosonline.com.br/conhece-o-power-bi/">Washington Almeida</a>
+        </p>
+
+        <!-- Post Content -->
+
+        <p>Nesse artigo vamos falar da ferramenta POWER BI, já tem sido cobrada nos editais e esperamos mais questões em breve. Sendo assim vamos entender para o que ela serve e ver um pouco do seu funcionamento.</p>
+
+<p>O Power BI é uma solução da empresa Microsoft que tem a finalidade apoiar na análise de dados de maneira prática e sem muitas complicações. É um tipo de ferramenta classificada no hall das soluções de Data Discovery, similar ao antigo QlikView e ao QlikSense.</p>
+
+<p>Essas ferramentas apesar de terem até o nome BI no nome, como o caso do Power BI, não são ferramentas clássicas de um mundo BI pois não necessitam da complexidade de construção de Data Marts ou até mesmo Data Warehouses. As conexões de dados podem ser realizadas em um conjunto de dados simples (por exemplo, planilhas) e efetua cruzamentos para construção de informações para análise.</p>
+
+<p>No caso do Power BI dependendo do modo de licenciamento você poderá conectar com planilhas do Excel, data warehouses locais ou até mesmo fontes de dados na Nuvem.</p>
+
+<p>A ideia principal por trás dessa solução é fornecer funcionalidades de uma ferramenta OLAP clássica, mas sem a complexidade de cargas de dados passando pelo processo de ETL. Por essa facilidade vem ganhando mercado e até mesmo já tem sido exigida nos concursos, como agora no caso do DEPEN.</p>
+
+<p>Consultando a documentação oficial [1] , o Power Bi é dividido em algumas partes, assim descritas:</p>
+ <ul>
+  <li>
+    Um aplicativo de desktop do Windows chamado Power BI Desktop.
+  </li>
+   <li>
+    Um serviço SaaS (software como serviço) online chamado de serviço do Power BI.
+  </li>
+   <li>
+  Aplicativos móveis do Power BI para dispositivos Windows, iOS e Android.
+  </li>
+   <li>
+ O quarto elemento, o Servidor de Relatórios do Power BI (versão full), permite publicar relatórios do Power BI em um servidor de relatórios local, depois de criá-los no Power BI Desktop.
+  </li>
+ </ul>
+ <h3>Power BI Ecossistema</h3>
+ <p>
+  Existe a aplicação desktop do Windows para computadores,
+  com foco no projeto e publicação de relatórios, pode ser usada offline e tem licença
+  de uso gratuito, para entender mais do licenciamento acesse a documentação [1],
+  além disso existe o servidor de relatórios que exige licenciamento específico
+  e serve de repositório para os painéis desenvolvidos, e opcionalmente a
+  aplicação para mobile, essa estrutura básica pode ser demonstrada na Figura 1.
+ </p>
+<img src="{{url_for('static',filename='img/conheceopowerbi.png')}}"border-radius: 50%; width="90%" height="300"id ="box">
+<p>E na figura 2 uma visão de um dashboard desenvolvido no Power BI.</p>
+<img src="{{url_for('static',filename='img/Power-BI-2.png')}}"border-radius: 50%; width="90%" height="300"id ="box">
+           
+ 
+ {%endblock%}
+       

@@ -4,4 +4,7 @@ FLASK-LOGIN==0.4.1
 FLASK-WTF
 Bootstrap-Flask==1.2.0
 FLASK_MIGRATE
-FLASF_SCRIPT
+FLASk_SCRIPT
+Flask-Mail
+email_validator
+

@@ -1,46 +1,22 @@
-from app import db
+from app import db, login_manager
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import UserMixin
 
-class User(db.Model):
-    __tablename__ = "users"
-    
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True)
-    password= db.Column(db.String(80))
-    name = db.Column(db.String(80))
-    email = db.Column(db.String, unique= True)
-    
-    def __init__(self, username, password, name, email):
-        self.username = username
-        self.password = password
+@login_manager.user_loader
+def get_user(user_id):
+    return User.query.filter_by(id=user_id).first()
+
+class User(db.Model, UserMixin):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    name = db.Column(db.String(86), nullable=False)
+    email = db.Column(db.String(84), nullable=False, unique=True)
+    password = db.Column(db.String(128), nullable=False)
+
+    def __init__(self, name, email, password):
         self.name = name
         self.email = email
-        
-    def __repr__(self):
-        return "<User %r>"% self.username
+        self.password = generate_password_hash(password)
 
-class Post(db.Model):
-    __tablename__ = "posts"
-    
-    id = db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.Text)
-    user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
-    
-    user = db.relationship('User',Foreign_keys= user_id)
-    
-    def __init__(self, content, user_id):
-        self.content = content
-        self.user_id= user_id
-        
-    def __repr__(self):
-        return "<Post %r>" % self.id
-
-class Follow(db.Model):
-    __tablename__ = "follows"
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    follower_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    
-    user = db.relationship('User',Foreign_keys= user_id)
-    follower = db.relationship('User',Foreign_keys= follower_id)
-    
-    
+    def verify_password(self, pwd):
+        return check_password_hash(self.password, pwd)

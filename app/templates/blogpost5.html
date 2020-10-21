@@ -1,0 +1,49 @@
+
+{%extends 'blogpostbase.html'%}
+
+{%block blog%}
+<style>
+  .bg-backp{
+      background: url({{ url_for ('static', filename = 'img/backcinza.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+</style>
+
+        <img class="Img.Center" src="{{url_for('static',filename='img/Card_PowerApps_Mailto.png')}}" width="100%" height="400"xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/> 
+        <!-- Title -->
+        <h1 class="mt-4">Abrindo Seu Gerenciador de Emails no PowerApps com uma URL de Email.</h1>
+        <!-- Author -->
+        <p class="lead">
+          by Rudimar
+        </p>
+        
+        <div class="bg-backp card embed-responsive">
+            <p>
+               <span style="color: #1E90FF;"> <b>TELEFONE</b></spam>
+                <span style="color: #DC143C;">Launch </span><span style="color: #1E90FF;">(<span style="color: #DAA520;">"tel:"</span> & <span style="color: #8B4513;">GaleriaContatos</span>.Selected.Telefone)</span>
+             </p>
+             <p>
+                <span style="color: #1E90FF;"><b>WHATSAPP</b></spam>
+                <span style="color: #DC143C;">Launch </span><span style="color: #1E90FF;">( <span style="color: #9370DB;">Concatenate</span>("whatsapp://send?phone="; <span style="color: #8B4513;">GaleriaContatos</span>.Selected.Telefone ))</span>
+             </p>
+             <p>
+                <span style="color: #1E90FF;"><b>E-MAIL</b></spam>
+                <span style="color: #DC143C;">Launch </span><span style="color: #1E90FF;">(
+                <span style="color: #DAA520;"> "mailto:"</span> &
+                <span style="color: ##8B4513;"> GaleriaContatos</span>.Selected.Email & 
+                "?subject=Solicitação " & 
+                "&body=" &
+                "Olá, " & 
+                 <span style="color: #8B4513;"> GaleriaContatos</span>.Selected.Nome & "%0D%0A" &
+                <span style="color: #DC143C;">  "A seguinte atividade requer sua atenção:</span> %0D%0A %0D%0A" & 
+                <span style="color: #DC143C;">  "Atividade:</span>  %0D%0A"&
+                <span style="color: #DC143C;">  "Status:</span>  Pendente")</span>
+             </p>
+        </div>
+       
+ {%endblock%}
+       

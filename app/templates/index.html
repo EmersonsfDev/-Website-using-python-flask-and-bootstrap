@@ -1,0 +1,300 @@
+
+{% extends 'base.html' %}
+ {%block content%}
+
+  <style type="text/css">
+   .bg-logo{
+      background: url({{ url_for ('static', filename = 'img/fc.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+      }
+      .bg-back{
+      background: url({{ url_for ('static', filename = 'img/roxo.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+      .teste{
+      background: url({{ url_for ('static', filename = 'img/y.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+      }
+      .yellow{
+      background: url({{ url_for ('static', filename = 'img/yellow.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+    }
+  </style>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+ 
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{url_for('static',filename='img/powerapps.png')}}" width="100%" height="700"xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/> 
+       
+      </div>
+
+      <div class="carousel-item ">
+         <img src="{{url_for('static',filename='img/pbi.png')}}" width="100%" height="700"xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/> 
+       
+      </div>
+
+      <div class="carousel-item ">
+        <img src="{{url_for('static',filename='img/pc.jpg')}}" width="100%" height="700"xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/> 
+    
+      </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+
+
+    <div class="row  featurette bg-back text-white">  
+      <div class="container marketing bg-back">
+      <br><br>
+          <div class="row featurette">
+            <div class="col-md-7 bg-back card embed-responsive">
+               <br><br>
+                <h2 class="featurette-heading">Quem Somos</h2>
+               <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="300" height="6" >
+               <p class="lead">Powerapps Brasil<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.</p>
+               <p><a class="btn btn-secondary btn-success" href="#" role="button">Sobre&raquo;</a></p>
+            </div>
+             
+            <div class="col-md-5 bg-back  embed-responsive">
+              <img  src="{{url_for('static',filename='img/logo.png')}}" width="100%" height="100%" id ="box">
+            </div>
+          </div>
+           
+     
+        <div class="container elementor-widget-container embed-responsive">
+         <hr class="featurette-divider">
+        
+          <h1  class="elementor-heading-title elementor-size-default ">NOSSOS SERVIÇOS</a></h1>
+          <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="500" height="6">
+    
+          <div class="row">
+            <div id="box" class="hoverzoom col-lg-4" alt="Hover Zoom CSS3"style="background-color:#742774">
+              <img src="{{url_for('static',filename='img/power.png')}}"border-radius: 50%; width="90%" height="90%">
+                <div class ="retina">
+                <p>Uma plataforma de serviços, dados e conectores que permite que a sua empresa crie aplicativos empresariais de maneira mais ágil e simples.</p>
+                <p><a class="btn btn-secondary" href="#faleConosco" role="button">Ver detalhes&raquo;</a></p>
+              </div>
+            </div><!-- /.col-lg-4 -->
+
+            <div id="box" class="hoverzoom col-lg-4"alt="Hover Zoom CSS3"style="background-color: #f1c911">
+              <img src="{{url_for('static',filename='img/pbd.jpg')}}"border-radius: 50%; width="80%" height="80%">
+              <div class ="retina">
+                <p> Crie visualizações completas e atrativas, bem como aplique filtros, publique e compartilhe relatórios e Dashboards com quem quiser.</p>
+                <p><a class="btn btn-secondary" href="#faleConosco" role="button">Ver detalhes &raquo;</a></p>
+              </div>
+            </div><!-- /.col-lg-4 -->  
+
+            <div id="box" class="hoverzoom col-lg-4"alt="Hover Zoom CSS3"style="background-color:#0066ff">
+              <img  src="{{url_for('static',filename='img/PowerAutomate-icon.png')}}"border-radius: 50%; width="90%" height="90%">
+            <div class ="retina">
+              <p>  Crie fluxos de trabalho automatizados entre seus aplicativos e serviços favoritos para sincronizar arquivos, obter notificações.</p>
+              <p><a class="btn btn-secondary" href="#faleConosco" role="button">Ver detalhes &raquo;</a></p>
+            </div>
+            </div><!-- /.col-lg-4 -->  
+          </div>   
+        </div>
+
+        <br><br> 
+      
+        <div class="row featurette  text-white ">
+            <div class="col-md-7 mb-10 bg-back card embed-responsive">
+               <br><br>
+                <h2 class="featurette-heading">Use Dashboards em sua empresa</h2>
+               <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="300" height="6" >
+               <p class="lead">Sua empresa ganha em competitividade e decisões estratégicas são tomadas com maior precisão.</p>
+               <p><a class="btn btn-secondary btn-success" href="#faleConosco" role="button">Sobre&raquo;</a></p>
+            </div>
+             
+            <div class="col-md-5 mb-10 bg-back  embed-responsive">
+              <img  src="{{url_for('static',filename='img/dashboard.jpeg')}}" width="100%" height="100%" id ="box">
+            </div>
+          </div>
+        <br><br>
+      </div>
+  </div>
+      <div class="container marketing ">
+        <hr class="featurette-divider">
+
+          <div class="row bg-back featurette text-white">
+            <div class="col-md-7 order-md-2 embed-responsive">
+                <br>  <br>  
+                <h2 class="featurette-heading"> Produza aplicativos sem grande conhecimento em programação</h2>
+                <img   src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="200" height="6"id ="box"> 
+              . <br><br>
+                <ul>
+                  <li>
+                  <p class="lead">Simplicidade no desenvolvimento.</p>
+                  </li>
+                   <li>
+                  <p class="lead"> Conecta com diversas plataformas de dados.</p>
+                  </li>
+                   <li>
+                  <p class="lead"> É fácil compartilhar aplicativos. </p>
+                  </li>
+                </ul>  
+                <p><a class="btn btn-secondary btn-success" href="#faleConosco" role="button">Comece Agora&raquo;</a></p>
+                <br><br>
+                <img   src="{{url_for('static',filename='img/mobile-apps.png')}}"border-radius: 50%;width="650" height="253"; >
+            </div>
+            <div class="col-md-5 order-md-1 embed-responsive">
+              <img class="bloco2"  src="{{url_for('static',filename='img/powera.png')}}"border-radius: 50%; width="450" height="650"id ="box">
+            </div>
+           </div>
+            
+          <div class="container marketing">
+              <!-- START THE FEATURETTES -->
+            <hr class="featurette-divider">
+
+              <div class="row featurette">
+                <div class="col-md-7 order-md-2 embed-responsive">
+                  <h2 class="featurette-heading">It'sSeg analisa riscos de Covid-19 com Power BI</h2>
+                  <img   src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="200" height="6"id ="box">
+                  <p class="lead">A It’sSeg, corretora de seguros especializada em gestão de benefícios, está utilizando o Power BI Premium, ferramenta de business intelligence da Microsoft, para identificar os riscos em relação à Covid-19 entre os beneficiários dos planos de saúde.</p>
+                  <p><a class="btn btn-secondary" href="blogpost" role="button">Ver no blog&raquo;</a></p>
+                </div>
+                <div class="col-md-5 order-md-1 embed-responsive">
+                <img class="bloco2"  src="{{url_for('static',filename='img/pc.jpg')}}"border-radius: 50%; width="450" height="350"id ="box">
+                </div>
+              </div>
+
+
+              <hr class="featurette-divider">
+
+              <div class="row featurette">
+                <div class="col-md-7 embed-responsive">
+                  <h2 class="featurette-heading">PowerApps Na Prática </h2>
+                  <img   src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="200" height="6"id ="box">
+                  <p class="lead">Funcionários do Metrô de Salvador criam aplicativo de gerenciamento de manutenção de trem</p>
+                  A ferramenta foi por meio do Microsoft Power Apps, e os funcionários construíram um banco de dados com informações para o gerenciamento da manutenção corretiva, preventiva e auxiliares no metrô baiano. Com a plataforma é possível atualizar as informações em tempo real, gerar relatórios com balanço das atividades realizadas pelas equipes, além de mensurar e acompanhar os resultados.
+                <p><a class="btn btn-secondary" href="#" role="button">Ver no blog&raquo;</a></p>
+                </div>
+                <div class="col-md-5 embed-responsive">
+                <img class="bloco" src="{{url_for('static',filename='img/Card_PowerApps_Search.png')}}"border-radius: 50%; width="450" height="350"id ="box">
+                </div>
+              </div>
+
+
+              <hr class="featurette-divider">
+
+              <div class="row featurette teste">
+                <div class="col-md-7 order-md-2 zoom">
+                  <img  class="img-responsive" src="{{url_for('static',filename='img/ys.png')}}"border-radius: 50%; width="350" height="200">
+                </div>
+
+                <div class="col-md-5 order-md-1 embed-responsive">
+                  <iframe width="853" height="480" src="https://youtube.com/embed/u548qyxRTBU"  allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <hr class="featurette-divider">
+    </div><!-- /.container -->
+</div>  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+ <div class="bg-logo">
+  <div class="container text-white">
+    <div class="row justify-content-md-center">
+      <div class="col-7">
+      
+        {% if success %}
+           <p>Obrigado pela sua mensagem. Entraremos em contato com você em breve.</p>
+      
+        {% else %}  
+          {% for message in form.name.errors %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+          
+          {% for message in form.email.errors %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+          
+          {% for message in form.subject.errors %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+          
+          {% for message in form.message.errors %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+
+          <form action="{{ url_for('index') }}" role="form" method="post" id="reused_form" >
+               <h1 align"center">
+                 <a name="faleConosco"  style="text-decoration:none "
+                   class="title-3 m--title-6 mt-2  text-white">Fale Conosco
+                 </a>
+               </h1>
+    <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="500" height="6">
+          
+            {{ form.hidden_tag() }}
+            <br><br>
+            <div class="form-row">
+              <div class="form-group col-md-6 ">
+                <label for="name">Nome:</label>
+                <input type="name"  class="form-control"id="name" name="name"   required maxlength="50">
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control"id="email" name="email" required maxlength="50">
+              </div>
+            </div>
+
+              <div class="form-group">
+                <label for="subject">
+                    Assunto:</label>
+                <input type="subject" class="form-control"
+                id="subject" name="subject" required maxlength="50">
+            </div>
+            <div class="form-group ">
+                <label for="message">
+                    Mensagem:</label>
+                <textarea class="form-control" type="textarea" name="message"
+                id="message" placeholder="Sua mensagem aqui"
+                maxlength="6000" rows="7"></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Enviar! →</button>
+
+          </form>
+          <br><br>
+        {% endif %}
+
+      </div>       
+    </div>
+  <div>
+</div>
+    
+{% endblock %}
+
+ 

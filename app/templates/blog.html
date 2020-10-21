@@ -1,0 +1,178 @@
+ {% extends 'base.html' %}
+ {%block content%}
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='img/blog-home.css') }}">
+  <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <style type="text/css">
+  
+      .bg-back{
+      background: url({{ url_for ('static', filename = 'img/roxo.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+      }
+      .yellow{
+      background: url({{ url_for ('static', filename = 'img/yellow.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+       }
+      Img.Center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+     }
+  
+  </style>
+  
+  <div class=" bg-back text-white">
+
+      <hr class="featurette-divider">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8 ">
+
+            <!-- Blog Post -->
+            <div class="card mb-4 text-black-50">
+              <img src="{{url_for('static',filename='img/cpbi.jpg')}}" width="100%" height="400"xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/> 
+             <div class="card-body">
+                <h2 class="card-title ">Conhece o Power BI?</h2>
+                <p class="card-text">Nesse artigo vamos falar da ferramenta POWER BI, já tem sido cobrada nos editais e esperamos mais questões em breve. Sendo assim vamos entender para o que ela serve e ver um pouco do seu funcionamento.</p>
+                <a href="blogpost4" class="btn btn-primary">Ver Mais &rarr;</a>
+              </div>
+              <div class="card-footer text-muted">
+                  Postado em 03/07/2020 16:17
+                <a href="https://blog.grancursosonline.com.br/conhece-o-power-bi/">Washington Almeida</a>
+              </div>
+            </div>
+
+            <div class="card mb-4 text-black-50 ">
+              <img class="Img.Center" src="{{url_for('static',filename='img/Card_PowerApps_Mailto.png')}}" width="100%" height="400"xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/> 
+             <div class="card-body">
+                <h2 class="card-title ">Abrindo Seu Gerenciador de Emails no PowerApps com uma URL de Email.</h2>
+                <p class="card-text"></p>
+                <a href="blogpost5" class="btn btn-primary">Ver Mais &rarr;</a>
+              </div>
+              <div class="card-footer text-muted">
+                  Postado em 20/10/2020 12:34 por Rudimar.
+              </div>
+            </div>
+
+            <div class="card mb-4 text-black-50 ">
+              <img class="Img.Center" src="{{url_for('static',filename='img/Card_PowerApps_Search.png')}}" width="100%" height="400"xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/> 
+             <div class="card-body">
+                <h2 class="card-title ">Veja como Realizar filtro de Dados no PowerApps</h2>
+                <p class="card-text"></p>
+                <a href="blogpost6" class="btn btn-primary">Ver Mais &rarr;</a>
+              </div>
+              <div class="card-footer text-muted">
+                  Postado em 03/07/2020 16:17
+                <a href="https://blog.grancursosonline.com.br/conhece-o-power-bi/">Washington Almeida</a>
+              </div>
+            </div>
+
+
+
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+              <li class="page-item">
+                <a class="page-link" href="#">&larr; Older</a>
+              </li>
+              <li class="page-item disabled">
+                <a class="page-link" href="#">Newer &rarr;</a>
+              </li>
+            </ul>
+
+        
+          </div>
+
+          <!-- Sidebar Widgets Column -->
+          <div class="col-md-4">
+
+            <!-- Categories Widget -->
+            <div class="card my-4 ">
+              <h5 class="card-header" style="background-color:#742774">Tecnologia</h5>
+              <div class="card-body">
+                <div class="row">
+
+                  <div class="col-lg-6">
+                    <img class="grow" src="{{url_for('static',filename='img/destaque1.png')}}"border-radius: 50%; width="200" height="100"id ="box">
+                  </div>
+
+                  <div class="col-lg-10">
+                    <a href="{{url_for('blogpost2')}}">Microsoft apresenta plataforma que visa tornar mais seguro o retorno ao ambiente de trabalho</a> 
+                    </div>
+                  <br><br>
+                  <div class="col-lg-6">
+                    <img class="grow"src="{{url_for('static',filename='img/destaque2.jpg')}}"border-radius: 50%; width="200" height="100"id ="box">
+                  </div>
+
+                  <div class="col-lg-10">
+                    <a href="{{url_for('blogpost3')}}">Power Apps, Power Automate e Power BI estão disponíveis nas novas regiões de datacenter da Microsoft na Alemanha em Frankfurt e Berlim</a> 
+                
+                  </div>
+
+                  <br><br>
+                  <div class="col-lg-6">
+                    <img class="grow"src="{{url_for('static',filename='img/pc.jpg')}}"border-radius: 50%; width="200" height="100"id ="box">
+                  </div>
+
+                  <div class="col-lg-10">
+                    <a href="{{url_for('blogpost')}}">It'sSeg analisa riscos de Covid-19 com Power BI</a> 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Side Widget -->
+            <div class="card my-4 grow" >
+              <h5 class="card-header"style="background-color:#742774">Microsoft Powerapss</h5>
+              <div class="card-body">
+              <a href="https://www.amazon.com.br/Learn-Microsoft-PowerApps-customized-applications-ebook/dp/B081CRRB62/ref=asc_df_B081CRRB62/?tag=googleshopp00-20&linkCode=df0&hvadid=445998734545&hvpos=&hvnetw=g&hvrand=15492411722806971986&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1031752&hvtargid=pla-859442087486&psc=1">
+                <img src="{{url_for('static',filename='img/livro3.jpg')}}"border-radius: 50%; width="200" height="250" id= "#centro">
+              </a>
+              </div>
+            </div>
+              <div class="card my-4 grow">
+              <h5 class="card-header"style="background-color:#742774">Power BI em 100 Páginas</h5>
+              <div class="card-body">
+              <a href="https://www.amazon.com.br/Power-BI-100-P%C3%A1ginas-fundamentos-ebook/dp/B083V2NGB5/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=power+bi+em+100+paginas&qid=1602876265&s=digital-text&sr=1-1">
+                 <img src="{{url_for('static',filename='img/livro1.jpg')}}"border-radius: 50%; width="200" height="250">
+              </a>
+              </div>
+            </div>
+              <div class="card my-4 grow">
+              <h5 class="card-header"style="background-color:#742774">Análise de Dados com Power BI</h5>
+              <div class="card-body">
+                <a href="https://www.amazon.com.br/70-779-Analyzing-Visualizing-Microsoft-Excel/dp/1509308040/ref=asc_df_1509308040/?tag=googleshopp00-20&linkCode=df0&hvadid=379735814613&hvpos=&hvnetw=g&hvrand=2717423229501659290&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1031752&hvtargid=pla-444957897243&psc=1">
+                 <img src="{{url_for('static',filename='img/livro2.jpg')}}"border-radius: 50%; width="200" height="250">
+                </a>
+               </div>
+            </div>
+              <div class="card my-4 grow">
+              <h5 class="card-header"style="background-color:#742774">Iniciando com Powerapss</h5>
+              <div class="card-body">
+                <a href="https://www.amazon.com.br/Beginning-PowerApps-Non-Developers-Building-Applications-ebook/dp/B077SNMD61/ref=pd_sim_351_1/143-7070349-4614211?_encoding=UTF8&pd_rd_i=B077SNMD61&pd_rd_r=b744dcd3-3d2c-44a8-b716-2a01e3833f36&pd_rd_w=aCn84&pd_rd_wg=EEGzO&pf_rd_p=8975968d-26e0-4ed6-a998-e5ef35de1f9a&pf_rd_r=7K3XF6HZEP34578WCXN6&psc=1&refRID=7K3XF6HZEP34578WCXN6">
+                 <img src="{{url_for('static',filename='img/livro4.jpg')}}"border-radius: 50%; width="200" height="250">
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+    <!-- /.row -->
+     </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+{% endblock %}
