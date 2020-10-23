@@ -1,5 +1,5 @@
 
-<!doctype html>z
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,44 +11,55 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
     <link rel="stylesheet" href="{{ url_for('static',filename='style/fontawesome.min.css') }}">
-    <!-- Bootstrap core CSS -->
+      <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/footer.css') }}">
-   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/estilos.css') }}">
-   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/s.css') }}">
-  
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/estilos.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/s.css') }}">
+     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/navabar.css') }}">
+    
    
   </head>
   <body>
+  <style>
+       .bg-rox{
+      background: url({{ url_for ('static', filename = 'img/rox.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+  </style>
     <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-rox">
     <a class="navbar-brand" href="{{url_for('index')}}">PowerAppsBrasil</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <img src="{{url_for('static',filename='img/blog.png')}}"border-radius: 50%; width="25" height="25">
-      
-        <li class="nav-item">
-         <a class="nav-link" href="{{url_for('blog')}}">Blog <span class="sr-only">(current)</span></a>
-        </li>
-        <img src="{{url_for('static',filename='img/graficos.png')}}"border-radius: 50%; width="25" height="25">
-      
-        <li class="nav-item">
-           <a class="nav-link" href="#">Projetos <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul class="navbar-nav ml-auto">
-         <img src="{{url_for('static',filename='img/funcao.png')}}"border-radius: 50%; width="25" height="25">
-            <li class="nav-item">
-             <a  class="nav-link" href="{{url_for('register')}}">Registre-se <span class="sr-only">(current)</span></a>
+      </div class ="col-auto">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item">
+            <a class="nav-link" href="{{url_for('blog')}}">Blog <span class="sr-only">(current)</span></a>
             </li>
-        </ul>
-      </div>
-   
-    </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projetos <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#Cursos">Cursos <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                <a  class=" btn btn-success" href="{{url_for('register')}}">Registre-se <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>  
   </nav>
 </header>
 

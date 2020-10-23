@@ -1,0 +1,11 @@
+
+.navbar-brand{
+    font-size: 30px;
+}
+.navbar-dark .navbar-nav .nav-link{
+    font-weight: 700;
+    font-size: 20px;
+}
+.navbar-dark .navbar-nav .nav-item{
+    margin: 0 20px;
+}

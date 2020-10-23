@@ -61,7 +61,7 @@ def blogpost5():
 
 @app.route("/blogpost6")
 def blogpost6():
-    return render_template('blogpost6.html')       
+    return render_template('blogpost6.html')      
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
