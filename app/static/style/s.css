@@ -13,7 +13,23 @@
 	position: relative;
 }
 
+.ps-item2 {
+	text-align: center;
+	padding: 40px 30px 52px;
+	border: 1px solid #f36100;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin-bottom: 30px;
+	position: relative;
+}
+
 .ps-item:hover {
+
+    border-color: #bd00ce;
+
+}
+.ps-item2:hover {
 
     border-color: #bd00ce;
 
