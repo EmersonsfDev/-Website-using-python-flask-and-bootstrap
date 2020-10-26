@@ -17,10 +17,13 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/estilos.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/s.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/navabar.css') }}"> 
-
- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='cssStyle/owl.carousel.min.css') }}"> 
- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='cssStyle/blog.css') }}"> 
-
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/responsive.css') }}"> 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='cssStyle/owl.carousel.min.css') }}"> 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='cssStyle/blog.css') }}"> 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/slicknav.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/animate.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}"> 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/slick.css') }}"> 
 
 
 
@@ -37,35 +40,43 @@
       }
   </style>
     <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-rox">
-    <a class="navbar-brand" href="{{url_for('index')}}">PowerAppsBrasil</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      </div class ="col-auto">
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-             <li class="nav-item">
-            <a class="nav-link" href="{{url_for('blog')}}">Blog <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projetos <span class="sr-only">(current)</span></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#Cursos">Cursos <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item">
-                <a  class=" btn btn-success" href="{{url_for('register')}}">Registre-se <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-          </div>
+     <div class="header-transparent" >
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2"> 
+                            <a class="nav-link" href="{{url_for('index')}}">  <h2 style="color: white">PowerAppsBrasil</h2> <span class="sr-only">(current)</span></a>
+                                  
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">     
+                                                <li><a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a></li>                                                                                     
+                                                <li><a class="nav-link" href="{{url_for('blog')}}">Blog <span class="sr-only">(current)</span></a></li>
+                                                <li> <a class="nav-link" href="#">Projetos <span class="sr-only">(current)</span></a></li>
+                                                <li><a class="nav-link" href="https://www.udemy.com/course/aplicativos-com-powerapps-aprenda-desenvolvendo/?referralCode=5919DEA3BD9BB0849E9F">Cursos <span class="sr-only">(current)</span></a></li>
+                                            
+                                                <li><a href="#faleConosco">Fale Conoco</a></li>
+                                                <li class="button-header margin-left "><a href="{{url_for('register')}}" >Registrar</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>  
-  </nav>
 </header>
 
 <main role="main">
@@ -156,8 +167,10 @@
       <script src="{{url_for('static',filename='javascript/jquery.slicknav.js')}}"></script>
       <script src="{{url_for('static',filename='javascript/owl.carousel.min.js')}}"></script>
       <script src="{{url_for('static',filename='javascript/main.js')}}"></script>
-
-      
+      <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/jquery.slicknav.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/main.js')}}"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script></body>
       
 </html>
