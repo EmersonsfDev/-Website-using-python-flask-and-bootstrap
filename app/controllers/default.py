@@ -1,9 +1,12 @@
 from app import app,db
-from flask import render_template, flash,redirect,url_for,request
+from flask import render_template, flash,redirect,url_for,request,flash
 from flask_login import login_user
-from app.models.tables import User
 from app.models.forms import LoginForm,ContactForm,ResgisterForm
 from flask_mail import Message, Mail
+from flask_mysqldb import MySQL 
+import MySQLdb.cursors 
+import re 
+  
 
 mail = Mail()
 mail.init_app(app)
@@ -74,26 +77,29 @@ def register():
         username = request.form['username']
         email = request.form['email']
         pwd = request.form['password']
-
-        user = User(username, email, pwd)
-        db.session.add(user)
-        db.session.commit()
+        
+        cursor = db.connection.cursor(MySQLdb.cursors.DictCursor) 
+        cursor.execute('SELECT * FROM Usuario WHERE username = % s', (username, )) 
+        Usuario = cursor.fetchone() 
+        cursor.execute('INSERT INTO Usuario VALUES (NULL, % s, % s, % s)', (username, pwd, email, )) 
+        db.connection.commit() 
 
     return render_template('register.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    msg = '' 
     if request.method == 'POST':
         email = request.form['email']
         pwd = request.form['password']
-
-        user = User.query.filter_by(email=email).first()
-
-        if not user or not user.verify_password(pwd):
-            return redirect(url_for('login'))        
-
-        login_user(user)
-        return redirect(url_for('index'))
-
-    return render_template('login.html')
+        cursor = db.connection.cursor(MySQLdb.cursors.DictCursor) 
+        cursor.execute('SELECT * FROM Usuario WHERE email = % s AND password = % s', (email, pwd, )) 
+        Usuario = cursor.fetchone() 
+        if Usuario: 
+            msg = 'Logado Com Sucesso !'
+            return render_template('login.html', msg = msg) 
+        else: 
+         msg = 'Credenciais Inválidas!'
+    return render_template('login.html', msg = msg) 
+  
 
