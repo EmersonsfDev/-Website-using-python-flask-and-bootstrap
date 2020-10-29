@@ -26,6 +26,22 @@
       border
       -radius:7px;
       }
+        .bg-efeito{
+      background: url({{ url_for ('static', filename = 'img/detail-right-home.png') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+        .bg-laranja{
+      background: url({{ url_for ('static', filename = 'img/laranja2.png') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
       .teste{
       background: url({{ url_for ('static', filename = 'img/y.jpg') }});
       background-size: cover;
@@ -61,7 +77,7 @@
                   <div class="col-xl-6 col-lg-6">
                       <div class=" d-none d-lg-block f-right">
                             <br><br><br><br>
-                            <img  src="{{url_for('static',filename='img/power-platform-apps.png')}}"alt="" data-animation="fadeInRight" data-delay="1s">
+                            <img align="left" src="{{url_for('static',filename='img/power-platform-apps.png')}}"alt="" data-animation="fadeInRight" data-delay="1s">
                       </div>
                   </div>
               </div>
@@ -69,29 +85,36 @@
       </div>      
   </div>
   <!--================================================== -->
-  
+  <div class="slider-area slider-bg  " style="background:#111">
+  <div class="slider-active bg-efeito">
 
-  <div class="container-fluid" style="background:#111">
-    <br><br>
-    <div class="row  featurette text-white ">  
-      
-        <div class="container text-white">
-          <div class="row bg-backroxo   ps-item2">
-            <div class="col-md-5  bg-back card embed-responsive">
-                <img  src="{{url_for('static',filename='img/logo.png')}}" width="100%" height="100%" id ="box">
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-6 bg-back">
-            <br><br>
-              <h2 class="featurette-heading">Quem Somos</h2>
-                  <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="300" height="6" >
-                  <p class="lead">Powerapps Brasil<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.</p>
-                  <p><a class="btn btn-lg btn-success" href="#" role="button">Sobre&raquo;</a></p>
-            </div>
+      <div class="single-slider d-flex align-items-center slider-height ">
+          <div class="container">
+              <div class="row align-items-center justify-content-between">
+                  <div class="col-xl-5 col-lg-5 col-md-9 order-2 ">
+                      <div class="hero__caption">
+                          <br><br><br><br>
+                          <h1 >Quem Somos</h1>
+                          <p>
+                           Powerapps Brasil<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.
+                          </p>
+                          <a  href="#faleConosco" class="btn btn-success btn-lg">Contate-nos</a>
+                      </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 order-1">
+                      <div class=" d-none d-lg-block f-right ">
+                            <br><br><br><br>
+                          <img align="left" src="{{url_for('static',filename='img/PowerApps_perex_nNEW (1).png')}}" width="100%" height="500"id ="box">
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>   
-         
-        <div class="container">
+      </div>      
+  </div>
+
+  <div class="container-fluid " style="background:#111">
+    
+        <div class="container text-white ">
             <hr class="featurette-divider">
            <h1  class="elementor-heading-title elementor-size-default ">NOSSOS SERVIÇOS</a></h1>
            <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="500" height="6">
@@ -134,30 +157,37 @@
                 </div>
             </div>
         </div>
+        
+            <div class="slider-active bg-laranja">
 
-        <br><br> 
-      <div class="container ">
-        <div class="row featurette  text-white">
-          <div class=" bg-backroxo  ps-item2 text-white">
-            <div class="row">
-              <div class="col-md-5  bg-back card embed-responsive">
-                <img  src="{{url_for('static',filename='img/dashboard.jpeg')}}" width="100%" height="100%" id ="box">
-            </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-6 bg-back">
-              <br><br>
-                <h2 class="featurette-heading">Use Dashboards em sua empresa</h2>
-                  <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="300" height="6" >
-                <p class="lead">Sua empresa ganha em competitividade e decisões estratégicas são tomadas com maior precisão.</p>
-                <p><a class="btn btn-lg btn-success" href="#faleConosco" role="button">Sobre&raquo;</a></p>
-              </div>
-            </div>
-          </div>  
-      </div> 
+                <div class="single-slider d-flex align-items-center slider-height ">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-xl-5 col-lg-5 col-md-9  ">
+                                <div class="hero__caption">
+                                    <br><br><br><br>
+                                    <h1 >Use Dashboards em sua empresa</h1>
+                                    <p>
+                                    Powerapps Brasil<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.
+                                    </p>
+                                    <a  href="#faleConosco" class="btn btn-success btn-lg">Sobre</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class=" d-none d-lg-block f-right ">
+                                      <br><br><br><br>
+                                    <img align="left" src="{{url_for('static',filename='img/support-main-header.png')}}" width="100%" height="400"id ="box">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+           </div>
       
       <div class="container marketing ">
          <div class="container">
            <a name="Cursos"  style="text-decoration:none ">
+           <br><br>
             <h1 class="elementor-heading-title elementor-size-default text-white ">Conheça Nossos Cursos</a></h1>
            </a>
            <img src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="500" height="6">
@@ -202,7 +232,7 @@
                            <br><br>
                             <div class="row">
                               <div class="col-sm-9">
-                                <p ><a class=" btn btn-danger btn-lg" href="https://www.udemy.com/course/aplicativos-com-powerapps-aprenda-desenvolvendo/?referralCode=5919DEA3BD9BB0849E9F" role="button">Comece Agora</a></p>
+                                <p ><a target="_blank"class=" btn btn-danger btn-lg" href="https://www.udemy.com/course/aplicativos-com-powerapps-aprenda-desenvolvendo/?referralCode=5919DEA3BD9BB0849E9F" role="button">Comece Agora</a></p>
                               </div>
                             </div>
                           </div>
