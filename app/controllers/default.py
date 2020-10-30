@@ -33,6 +33,9 @@ def index():
   elif request.method == 'GET':
     return render_template('index.html', form=form)
 
+@app.route("/projeto")
+def projeto():
+    return render_template('projeto.html')
 
 @app.route("/blog")
 def blog():
