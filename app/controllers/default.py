@@ -1,11 +1,12 @@
 from app import app,db
-from flask import render_template, flash,redirect,url_for,request,flash
+from flask import render_template, flash,redirect,url_for,request,flash,config
 from flask_login import login_user
 from app.models.forms import LoginForm,ContactForm,ResgisterForm
 from flask_mail import Message, Mail
 from flask_mysqldb import MySQL 
 import MySQLdb.cursors 
 import re 
+import stripe
   
 
 mail = Mail()
@@ -36,6 +37,21 @@ def index():
 @app.route("/projeto")
 def projeto():
     return render_template('projeto.html')
+
+
+@app.route("/compra")
+def compra():
+    session = stripe.checkout.Session.create(
+        payment_method_types=['card'],
+        line_items=[{
+            'price':'price_1HjRbbH7KlqUP853FKmXS2CT',
+            'quantity' :1,
+        }],
+        mode='payment',
+        success_url=url_for('index', _external=True) + '?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url=url_for('projeto', _external=True),
+    )
+    return render_template('compra.html',checkout_session_id=session['id'],checkout_public_key=app.config['STRIPE_PUBLIC_KEY'])
 
 @app.route("/blog")
 def blog():
@@ -105,4 +121,5 @@ def login():
          msg = 'Credenciais Inválidas!'
     return render_template('login.html', msg = msg) 
   
-
+  
+ 
