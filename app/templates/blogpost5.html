@@ -18,9 +18,32 @@
         <h2 class="mt-4">Abrindo Seu Gerenciador de Emails no PowerApps com uma URL de Email.</h2>
         <!-- Author -->
         <p class="lead">
-          by Rudimar
+          by Rudimar Althof
         </p>
-        
+
+        <p><strong>Voc&ecirc; sabia que &eacute; poss&iacute;vel abrir o seu gerenciador de emails no PowerApps atrav&eacute;s da chamada de uma fun&ccedil;&atilde;o?</strong></p>
+         <p>Segundo a documenta&ccedil;&atilde;o do Power Apps, a fun&ccedil;&atilde;o Launch pode ser utilizada para iniciar uma p&aacute;gina Web ou outro aplicativo de tela e possuis tr&ecirc; par&acirc;metros, mas s&oacute; o primeiro &eacute; obrigat&oacute;rio e os outros dois n&atilde;o ser&atilde;o necess&aacute;rios neste momento.</p>
+         <p>Launch(endere&ccedil;o, par&acirc;metros, alvo)</p>
+         <p><strong>Endere&ccedil;o:&nbsp;</strong>o URL da p&aacute;gina Web que queremos abrir ou o ID de outro aplicativo de tela.</p>
+         <p>Embora aplicativos externos n&atilde;o sejam p&aacute;ginas Web ou outros aplicativos de tela, tamb&eacute;m &eacute; poss&iacute;vel cham&aacute;los atrav&eacute;s de suas URLs.</p>
+         <p>Por exemplo, &eacute; poss&iacute;vel abrir o gerenciador de email atrav&eacute;s da url "mailto:.....". Ao lan&ccedil;ar esta URL, o sistema ir&aacute; identificar que o usu&aacute;rio quer abrir a aplica&ccedil;&atilde;o de enviar e-mail e o far&aacute;.</p>
+         <p>Podemos tirar vantagem disso dentro do Power Apps para abrir aplicativos a partir de um aplicativo que desenvolvemos com essa ferramenta.</p>
+         <p>Que tal criar um aplicativo que te ajuda a gerar e-mails ou mensagens de Whatsapp pr&eacute;-definidos, agilizando a sua comunica&ccedil;&atilde;o?</p>
+         <p>O card abaixo explica um pouco melhor como tudo funciona para o caso do e-mail:&nbsp;</p>
+         <div style="display: table-cell; vertical-align: middle; text-align: center;"><img class="Img.Center" role="img" src="{{url_for('static',filename='img/Card_PowerApps_Mailto.png')}}" width="60%" height="auto" /></div>
+         <p>&nbsp;</p>
+         <p>Al&eacute;m disso, &eacute; poss&iacute;vel abrir outros apps como o Whatsapp e o Telefone, que por sinal s&atilde;o bem mais f&aacute;ceis.</p>
+         <p><br /> O c&oacute;digo abaixo apresenta como lan&ccedil;ar tais aplica&ccedil;&otilde;es:</p>
+         <div class="bg-backp card embed-responsive">
+         <p><span style="color: #1e90ff;"> <strong>TELEFONE</strong> <span style="color: #dc143c;">Launch </span> <span style="color: #1e90ff;">(<span style="color: #daa520;">"tel:"</span> &amp; <span style="color: #8b4513;">GaleriaContatos</span>.Selected.Telefone)</span> </span></p>
+         <p><span style="color: #1e90ff;"> <strong>WHATSAPP</strong> <span style="color: #dc143c;">Launch </span> <span style="color: #1e90ff;">( <span style="color: #9370db;">Concatenate</span>("whatsapp://send?phone="; <span style="color: #8b4513;">GaleriaContatos</span>.Selected.Telefone ))</span> </span></p>
+         <p><span style="color: #1e90ff;"> <strong>E-MAIL</strong> <span style="color: #dc143c;">Launch </span> <span style="color: #1e90ff;"> ( <span style="color: #daa520;"> "mailto:"</span> &amp; <span style="color: ##8b4513;"> GaleriaContatos</span>.Selected.Email &amp; "?subject=Solicita&ccedil;&atilde;o " &amp; "&amp;body=" &amp; "Ol&aacute;, " &amp; <span style="color: #8b4513;"> GaleriaContatos</span>.Selected.Nome &amp; "%0D%0A" &amp; <span style="color: #dc143c;"> "A seguinte atividade requer sua aten&ccedil;&atilde;o:</span> %0D%0A %0D%0A" &amp; <span style="color: #dc143c;"> "Atividade:</span> %0D%0A"&amp; <span style="color: #dc143c;"> "Status:</span> Pendente")</span></span></p>
+         <p>&nbsp;</p>
+         <hr /></div>
+         <p>Quer aprender PowerApps mas n&atilde;o tem e-mail corporativo para criar uma conta?</p>
+         <p>Veja no v&iacute;deo abaixo como fazer.</p>
+         <p>&nbsp;<iframe src="https://www.youtube.com/embed/38frFgkm8E4" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+               
         <div class="bg-backp card embed-responsive">
             <p>
                <span style="color: #1E90FF;"> <b>TELEFONE</b></spam>

@@ -2,87 +2,33 @@
 {% extends 'base.html' %}
  {%block content%}
 
-  <style type="text/css">
-   .bg-logo{
-      background: url({{ url_for ('static', filename = 'img/fc.jpg') }});
-      background-size: cover;
-      -moz-border-radius:7px;
-      -webkit-border-radius:7px;
-      border-radius:7px;
-      }
-      .bg-back{
-      background: url({{ url_for ('static', filename = 'img/carbon.jpg') }});
-      background-size: cover;
-      -moz-border-radius:7px;
-      -webkit-border-radius:7px;
-      border
-      -radius:7px;
-      }
-      .bg-backroxo{
-      background: url({{ url_for ('static', filename = 'img/roxo.jpg') }});
-      background-size: cover;
-      -moz-border-radius:7px;
-      -webkit-border-radius:7px;
-      border
-      -radius:7px;
-      }
-        .bg-efeito{
-      background: url({{ url_for ('static', filename = 'img/detail-right-home.png') }});
-      background-size: cover;
-      -moz-border-radius:7px;
-      -webkit-border-radius:7px;
-      border
-      -radius:7px;
-      }
-        .bg-laranja{
-      background: url({{ url_for ('static', filename = 'img/laranja2.png') }});
-      background-size: cover;
-      -moz-border-radius:7px;
-      -webkit-border-radius:7px;
-      border
-      -radius:7px;
-      }
-      .teste{
-      background: url({{ url_for ('static', filename = 'img/y.jpg') }});
-      background-size: cover;
-      -moz-border-radius:7px;
-      -webkit-border-radius:7px;
-      border-radius:7px;
-      }
-      .yellow{
-      background: url({{ url_for ('static', filename = 'img/yellow.jpg') }});
-      background-size: cover;
-      -moz-border-radius:7px;
-      -webkit-border-radius:7px;
-      border-radius:7px;
-    }
-  </style>
+<div style="background:#111">
+  <div class="slider-area slider-bg bg-degrade ">
+    <div class="slider-active">
 
-<div class="slider-area slider-bg ">
-  <div class="slider-active">
-
-      <div class="single-slider d-flex align-items-center slider-height ">
-          <div class="container">
-              <div class="row align-items-center justify-content-between">
-                  <div class="col-xl-5 col-lg-5 col-md-9 ">
-                      <div class="hero__caption">
-                          <br><br><br><br>
-                          <h1 data-animation="fadeInLeft" data-delay=".6s ">Crie aplicativos e Dashboards</h1>
-                          <p data-animation="fadeInLeft" data-delay=".8s">
-                            Utilize ferramentas como PowerApps e Power Bi para criar aplicativos,  dashboards e destaque-se no mercado.   
-                          </p>
-                          <a data-animation="fadeInLeft" data-delay="1s" href="#faleConosco" class="btn btn-success btn-lg">Contate-nos</a>
-                      </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6">
-                      <div class=" d-none d-lg-block f-right">
+        <div class="single-slider d-flex align-items-center slider-height ">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-5 col-lg-5 col-md-9 ">
+                        <div class="hero__caption">
                             <br><br><br><br>
-                            <img align="left" src="{{url_for('static',filename='img/power-platform-apps.png')}}"alt="" data-animation="fadeInRight" data-delay="1s">
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>      
+                            <h1 data-animation="fadeInLeft" data-delay=".6s ">Crie aplicativos e Dashboards</h1>
+                            <p data-animation="fadeInLeft" data-delay=".8s">
+                              Utilize ferramentas como PowerApps e Power Bi para criar aplicativos,  dashboards e destaque-se no mercado.   
+                            </p>
+                            <a data-animation="fadeInLeft" data-delay="1s" href="#faleConosco" class="btn btn-success btn-lg">Contate-nos</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class=" d-none d-lg-block f-right">
+                              <br><br><br><br>
+                              <img align="left" src="{{url_for('static',filename='img/power-platform-apps.png')}}"alt="" data-animation="fadeInRight" data-delay="1s">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+   </div>
   </div>
   <!--================================================== -->
   <div class="slider-area slider-bg  " style="background:#111">
@@ -96,7 +42,7 @@
                           <br><br><br><br>
                           <h1 >Quem Somos</h1>
                           <p>
-                           Powerapps Brasil<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.
+                           RBA DIGITAL<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.
                           </p>
                           <a  href="#faleConosco" class="btn btn-success btn-lg">Contate-nos</a>
                       </div>
@@ -104,7 +50,7 @@
                   <div class="col-xl-6 col-lg-6 order-1">
                       <div class=" d-none d-lg-block f-right ">
                             <br><br><br><br>
-                          <img align="left" src="{{url_for('static',filename='img/PowerApps_perex_nNEW (1).png')}}" width="100%" height="500"id ="box">
+                          <img align="left" src="{{url_for('static',filename='img/PowerApps_perex_nNEW (1).png')}}" width="100%" height="300"id ="box">
                       </div>
                   </div>
               </div>
@@ -157,26 +103,52 @@
                 </div>
             </div>
         </div>
-        
-            <div class="slider-active bg-laranja">
-
+   
+                  
+            <div class="slider-active bg-degrade">
                 <div class="single-slider d-flex align-items-center slider-height ">
                     <div class="container">
                         <div class="row align-items-center justify-content-between">
-                            <div class="col-xl-5 col-lg-5 col-md-9  ">
+                            <div class="col-xl-4 col-lg-4 col-md-7  ">
+                                <div class=" text-white">
+                                   <h1 >Gerenciamento de Produção</h1>  
+                                    <h1>
+                                    com <b style= "background-color: #341933">PowerApps</b> 
+                                    e Integração com <b style= "background-color: yellow">Power BI</b> 
+                               </h1>
+                              <br><br><br> 
+                             <a  href="controleProducao" class="btn btn-success btn-lg">Saiba Mais</a>
+                       </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8">
+                                <div class=" d-none d-lg-block f-right ">
+                                    <br><br><br><br><br><br>
+                                   <img align="left" src="{{url_for('static',filename='img/logop.png')}}" width="100%" height="500"id ="box">
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+           </div>      
+                          
+            <div class="slider-active bg-laranja">
+                <div class="single-slider d-flex align-items-center slider-height ">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-xl-7 col-lg-7 col-md-11  ">
                                 <div class="hero__caption">
-                                    <br><br><br><br>
+                                    
                                     <h1 >Use Dashboards em sua empresa</h1>
                                     <p>
-                                    Powerapps Brasil<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.
+                                     RBA DIGITAL<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.
                                     </p>
                                     <a  href="#faleConosco" class="btn btn-success btn-lg">Sobre</a>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6">
+                            <div class="col-xl-4 col-lg-4">
                                 <div class=" d-none d-lg-block f-right ">
-                                      <br><br><br><br>
-                                    <img align="left" src="{{url_for('static',filename='img/support-main-header.png')}}" width="100%" height="400"id ="box">
+                                     <br><br><br><br><br><br>
+                                    <img align="left" src="{{url_for('static',filename='img/support-main-header.png')}}" width="400" height="400"id ="box">
                                 </div>
                             </div>
                         </div>
@@ -196,7 +168,7 @@
           
           <div class="row bg-backroxo featurette text-white">
             <div class="col-md-7 order-md-2 embed-responsive">
-                <img align="right"  src="{{url_for('static',filename='img/udemy.png')}}"border-radius: 50%;width="300" height="100"; >  
+                <img align="right"  src="{{url_for('static',filename='img/udemy.png')}}"border-radius: 50%;width="200" height="80"; >  
                 <br><br><br><br>
                 <h2 class="featurette-heading"> Comece agora e esteja preparado para oportunidades de mercado.</h2>
                 <img   src="{{url_for('static',filename='img/linha.png')}}"border-radius: 50%; width="200" height="6"id ="box"> 
@@ -241,7 +213,8 @@
                 </div>      
             </div>
             <div class="col-md-5 order-md-1 embed-responsive">
-              <img class="bloco2"  src="{{url_for('static',filename='img/powera.png')}}"border-radius: 50%; width="450" height="650"id ="box">
+              <br><br><br>
+              <img class="bloco2"  src="{{url_for('static',filename='img/powera.png')}}"border-radius: 50%; width="450" height="450"id ="box">
             </div>
            </div>
         </div>
@@ -269,7 +242,7 @@
                 <div class="row">
                     <div class="col-xl-2 col-md-4 col-sm-6  ">
                         <div class="services__item">
-                          <img align="center"class="rounded-circle"  src="{{url_for('static',filename='img/mysql.png')}}" width="100" height="100" id ="box">
+                          <img align="center"class="rounded-circle"  src="{{url_for('static',filename='img/mysql.png')}}" width="70" height="70" id ="box">
                              <br> 
                             <h5>Mysql</h5>
                         
@@ -278,7 +251,7 @@
                     
                     <div class="col-xl-2 col-md-4 col-sm-6  ">
                         <div class="services__item">
-                    <img class="rounded-circle"  src="{{url_for('static',filename='img/excel.jpg')}}" width="100" height="100" id ="box">
+                    <img class="rounded-circle"  src="{{url_for('static',filename='img/excel.jpg')}}" width="70" height="70" id ="box">
                            <br>
                             <h5>Excel</h5>
                           
@@ -287,7 +260,7 @@
                      
                     <div class="col-xl-2 col-md-4 col-sm-6  ">
                         <div class="services__item">
-                            <img class="rounded-circle"  src="{{url_for('static',filename='img/p.png')}}" width="100" height="100" id ="box">
+                            <img class="rounded-circle"  src="{{url_for('static',filename='img/p.png')}}" width="70" height="70" id ="box">
                             <br>
                             <h5>PowerBi</h5>
                            
@@ -296,7 +269,7 @@
                    
                     <div class="col-xl-2 col-md-4 col-sm-6  ">
                         <div class="services__item">
-                              <img class="rounded-circle"  src="{{url_for('static',filename='img/usu.png')}}" width="100" height="100" id ="box">
+                              <img class="rounded-circle"  src="{{url_for('static',filename='img/usu.png')}}" width="70" height="70" id ="box">
                            <br>
                             <h5>Usuário 365</h5>
                             
@@ -304,7 +277,7 @@
                     </div>
                      <div class="col-xl-2 col-md-4 col-sm-6  ">
                         <div class="services__item">
-                              <img class="rounded-circle"  src="{{url_for('static',filename='img/git.png')}}" width="100" height="100" id ="box">
+                              <img class="rounded-circle"  src="{{url_for('static',filename='img/git.png')}}" width="70" height="70" id ="box">
                             <br>
                             <h5>Git</h5>
                            
@@ -312,13 +285,12 @@
                     </div>
                      <div class="col-xl-2 col-md-4 col-sm-6 ">
                         <div class="services__item">
-                              <img class="rounded-circle"  src="{{url_for('static',filename='img/onedrive.png')}}" width="100" height="100" id ="box">
+                              <img class="rounded-circle"  src="{{url_for('static',filename='img/onedrive.png')}}" width="70" height="70" id ="box">
                             <br>
                             <h5>OneDrive</h5>
                            
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -342,6 +314,7 @@
                         <div class="blog__item bg-back ps-item2  latest__item">
                             <img class="card"  src="{{url_for('static',filename='img/pc.jpg')}}"border-radius: 50%; width="150" height="150">
                             <p>It'sSeg analisa riscos de Covid-19 com Power BI</p>
+                            <br>
                             <p><a class="btn btn-lg btn-success" href="blogpost" role="button">Ver Mais&raquo;</a></p>
                         </div>
                     </div>
@@ -355,9 +328,9 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="blog__item bg-back ps-item2  latest__item">
-                            <img class="card"  src="{{url_for('static',filename='img/cpbi.jpg')}}"border-radius: 50%; width="150" height="150">
-                            <p>Conhece o PowerBi?.                        </p>
-                            <br><br>
+                          <img src="{{url_for('static',filename='img/dadoschaodefabrica.png')}}"border-radius: 50%; width="150" height="150"> 
+                            <p>Dados do chão de fábrica: qual o nível de maturidade da sua empresa em sua utilização?                        </p>
+                            
                             <p><a class="btn btn-lg btn-success" href="blogpost4" role="button">Ver Mais&raquo;</a></p>
                        
                         </div>
@@ -375,7 +348,7 @@
                              <img class="card"  src="{{url_for('static',filename='img/Card_PowerApps_Search.png')}}"border-radius: 50%; width="150" height="150">
                             <p>Veja como Realizar filtro de Dados no PowerApps.</p>
                             <p><a class="btn btn-lg btn-success" href="blogpost6" role="button">Ver Mais&raquo;</a></p>
-                       
+                            <br>
                         </div>
                     </div>
                     <div class="col-lg-4">

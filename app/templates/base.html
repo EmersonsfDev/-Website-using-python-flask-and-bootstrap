@@ -2,12 +2,21 @@
 <!doctype html>
 <html lang="en">
   <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FRSX08VY4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1FRSX08VY4');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>PowerAppsBrasil</title>
+    <title>RBADIGITAL</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
     <link rel="stylesheet" href="{{ url_for('static',filename='style/fontawesome.min.css') }}">
@@ -38,16 +47,89 @@
       border
       -radius:7px;
       }
+        .bg-logo{
+      background: url({{ url_for ('static', filename = 'img/fc.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+      }
+      .bg-back{
+      background: url({{ url_for ('static', filename = 'img/carbon.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+       .bg-degrade{
+      background: url({{ url_for ('static', filename = 'img/degradeh.png') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+        .bg-degrade2{
+      background: url({{ url_for ('static', filename = 'img/degradeback2.png') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+      .bg-backroxo{
+      background: url({{ url_for ('static', filename = 'img/roxo.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+        .bg-efeito{
+      background: url({{ url_for ('static', filename = 'img/detail-right-home.png') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+        .bg-laranja{
+      background: url({{ url_for ('static', filename = 'img/laranja2.png') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border
+      -radius:7px;
+      }
+      .teste{
+      background: url({{ url_for ('static', filename = 'img/y.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+      }
+      .yellow{
+      background: url({{ url_for ('static', filename = 'img/yellow.jpg') }});
+      background-size: cover;
+      -moz-border-radius:7px;
+      -webkit-border-radius:7px;
+      border-radius:7px;
+    }
   </style>
     <header>
+
+             
 <div class="header-transparent" >
   <div class="main-header ">
     <div class="header-bottom  header-sticky">
       <div class="container-fluid">
           <div class="row align-items-center">
-              <!-- Logo -->
+             <!-- Logo -->
               <div class="col-xl-2 col-lg-2"> 
-              <a class="nav-link" href="{{url_for('index')}}">  <h2 style="color: white">PowerAppsBrasil</h2> <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{url_for('index')}}">
+                 <img src="{{url_for('static',filename='img/LOGOTIPO.png')}}"border-radius: 50%; width="300" height="80"> 
+                </a>
                     
               </div>
               <div class="col-xl-10 col-lg-10">
@@ -58,11 +140,22 @@
                               <ul id="navigation">     
                                   <li><a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a></li>                                                                                     
                                   <li><a class="nav-link" href="{{url_for('blog')}}">Blog <span class="sr-only">(current)</span></a></li>
-                                  <li> <a class="nav-link" href="{{url_for('projeto')}}">Projetos <span class="sr-only">(current)</span></a></li>
-                                  <li><a target="_blank"class="nav-link" href="https://www.udemy.com/course/aplicativos-com-powerapps-aprenda-desenvolvendo/?referralCode=5919DEA3BD9BB0849E9F">Cursos <span class="sr-only">(current)</span></a></li>
-                              
+                                   <li><a target="_blank"class="nav-link" href="https://www.udemy.com/course/aplicativos-com-powerapps-aprenda-desenvolvendo/?referralCode=5919DEA3BD9BB0849E9F">Cursos <span class="sr-only">(current)</span></a></li>
                                   <li><a href="#faleConosco">Fale Conoco</a></li>
-                                  <li class="button-header margin-left "><a href="{{url_for('register')}}" >Registrar</a></li>
+                                  {% if session['id'] %}
+
+                                    <li><a> Bem vindo {{ session['username'] }}</a>
+                                              <ul class="submenu">
+                                                   <li><a class="nav-link" href="{{url_for('logout')}}">Logout <span class="sr-only">(current)</span></a></li>    
+                                              </ul>
+                                          </li>
+                                    {% else %}
+                                    <li>
+                                    </li>
+                                    <li>
+                                    <a class="nav-link"href="{{url_for('register')}}">Registre-se</a>
+                                    </li>
+                                  {% endif %}
                               </ul>
                           </nav>
                       </div>
@@ -78,7 +171,9 @@
   </div>
 </div>
 </header>
-
+<a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=554896035792" target="_blank">
+	 <img src="{{url_for('static',filename='img/icon-whatsapp-png-27.png')}}"border-radius: 50%; width="70" height="70">   
+</a>
 <main role="main">
   
   {%block content%}
@@ -87,14 +182,68 @@
   
 
 </main>
-
  <!-- Site footer -->
     <footer class="site-footer">
-      <div class="container">
         <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-title">
+                        <h1 align="center"  class="elementor-heading-title elementor-size-default text-white ">Nossos Parceiros</a></h1>
+                    </div>
+                </div>
+         </div>
+         
+          <section class="latest spad text-white">
+          <br><br>
+          <div class="container">
+             <div class="row">
+                <div class="latest__slider owl-carousel ">
+                    <div class="col-lg-4">
+                        <div class="blog__item  latest__item">
+                            <img class="card"  src="{{url_for('static',filename='img/maximiza.png')}}"border-radius: 50%; width="100" height="60">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item   latest__item">
+                           <img class="card" src="{{url_for('static',filename='img/maximiza.png')}}"border-radius: 50%; width="100" height="60">
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item  latest__item">
+                          <img src="{{url_for('static',filename='img/maximiza.png')}}"border-radius: 50%; width="100" height="60"> 
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item  latest__item">
+                            <img class="card"  src="{{url_for('static',filename='img/maximiza.png')}}"border-radius: 50%; width="100" height="60">
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                             <img class="card"  src="{{url_for('static',filename='img/maximiza.png')}}"border-radius: 50%; width="100" height="60">
+                          
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item  latest__item">
+                            <img class="card"  src="{{url_for('static',filename='img/maximiza.png')}}"border-radius: 50%; width="100" height="60">
+                           
+                        </div>
+                </div>
+            </div>
+           
+          </div>
+       
+    </section>
+      <div class="container">
+      
+        <div class="row">
+     
           <div class="col-sm-12 col-md-6">
             <h6>Sobre</h6>
-            <p class="text-justify">Powerapps Brasil<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.</p>
+            <p class="text-justify"> RBA DIGITAL<i> oferece um mundo de possibilidades </i> oferecemos consultoria e desenvolvemos projetos para o seu conforto.</p>
           </div>
 
           <div class="col-xs-6 col-md-3">
@@ -114,7 +263,7 @@
               <li>
                 <img src="{{url_for('static',filename='img/local.png')}}"border-radius: 50%; width="30" height="30"
                <svg class="bd-placeholder-img rounded-circle"</svg>
-                Rio Grande do Sul
+                Joinville, Santa Catarina
               
               </li>
               <br>
@@ -139,7 +288,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text"> &copy;Powerapps Brasil 2020.
+            <p class="copyright-text"> &copy;RBA DIGITAL 2020.
             </p>
           </div>
 
@@ -147,11 +296,11 @@
             <ul class="social-icons">
               <li><a target="_blank" class="facebook" href="https://www.facebook.com/RudimarBA">
                <img class="rounded-circle"src="{{url_for('static',filename='img/face.png')}}"border-radius: 50%; width="40" height="40"></i></a></li>
-              <li><a target="_blank" class="instagram" href="https://www.instagram.com/rudi.i.am/">
+              <li><a target="_blank" class="instagram" href=" https://www.instagram.com/rudimar.power/">
                <img class="rounded-circle"src="{{url_for('static',filename='img/instagram.png')}}"border-radius: 50%; width="40" height="40"></i></a></li></i></a></li>
-              <li><a target="_blank"class="youtube" href="#">
+              <li><a target="_blank"class="youtube" href="https://www.youtube.com/channel/UCkggJBxnoQkQmBs-bGe0EEg">
                <img class="rounded-circle"src="{{url_for('static',filename='img/youtube.png')}}"border-radius: 50%; width="40" height="40"></i></a></li></i></a></li>
-              <li><a target="_blank"class="linkedin" href="https://www.linkedin.com/in/rudimar/">
+              <li><a target="_blank"class="linkedin" href= "https://www.linkedin.com/company/rba-digital">
                 <img class="rounded-circle"src="{{url_for('static',filename='img/linkedin.png')}}"border-radius: 50%; width="40" height="40"></i></a></li></i></a></li>   
             </ul>
           </div>
@@ -172,5 +321,12 @@
       <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
       <script src="{{url_for('static',filename='js/main.js')}}"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script></body>
-      
+      <script src="https://js.stripe.com/v3/"></script>
+     
+        <script>
+          const checkout_public_key = '{{checkout_public_key}}'
+          const checkout_session_id = '{{checkout_session_id}}'
+        </script>
+    
+        <script src= "{{url_for('static',filename='js/script-no-ajax.js')}}"></script>
 </html>

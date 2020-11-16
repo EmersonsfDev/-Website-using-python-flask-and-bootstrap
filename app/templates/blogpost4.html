@@ -2,58 +2,113 @@
 {%extends 'blogpostbase.html'%}
 
 {%block blog%}
-     
-        <img src="{{url_for('static',filename='img/cpbi.jpg')}}"border-radius: 50%; width="100%" height="200"id ="box"> 
+      
+        <img src="{{url_for('static',filename='img/dadoschaodefabrica.png')}}"border-radius: 50%; width="100%" height="400"id ="box"> 
       
         <!-- Title -->
-        <h2 class="mt-4">Conhece o Power BI?</h2>
+        <h2 class="mt-4">Dados do chão de fábrica: qual o nível de maturidade da sua empresa em sua utilização?</h2>
 
         <!-- Author -->
         <p class="lead">
           by
-         <a href="https://blog.grancursosonline.com.br/conhece-o-power-bi/">Washington Almeida</a>
+         <a href="https://www.linkedin.com/pulse/dados-do-ch%C3%A3o-de-f%C3%A1brica-qual-o-n%C3%ADvel-maturidade-da-em-baesso-althof/">Rudimar Baesso Althof</a>
         </p>
 
-        <!-- Post Content -->
+      <p style="text">
+       Toda empresa possui dados, não importa o tamanho.
+       Pode ser uma barraquinha de cachorro quente, que contabiliza as vendas e o produto mais 
+       vendido para planejar seu estoque até uma multinacional que possui dados sobre estoque,
+       vendas, produção, RH, entre outros.
+      </p>
+      
+      <p>Porém, nem toda empresa utiliza os dados da mesma forma:
+       algumas não fazem nada ainda enquanto outras geram indicadores e fazem projeções para o futuro.
+      </p>
 
-        <p>Nesse artigo vamos falar da ferramenta POWER BI, já tem sido cobrada nos editais e esperamos mais questões em breve. Sendo assim vamos entender para o que ela serve e ver um pouco do seu funcionamento.</p>
+      <p>A imagem abaixo mostra quais são os dados e suas utilizações em cada nível de uma empresa,
+        considerando o setor de produção. Observe que cada colaborador, utiliza informações diferentes,
+        que muitas vezes originam-se dos mesmos dados. É o caso da produção diária, produção
+        mensal e lucro anual. Todos estão relacionados ao número de peças produzidas, não é?
+      </p>
 
-<p>O Power BI é uma solução da empresa Microsoft que tem a finalidade apoiar na análise de dados de maneira prática e sem muitas complicações. É um tipo de ferramenta classificada no hall das soluções de Data Discovery, similar ao antigo QlikView e ao QlikSense.</p>
+      <p align="center">
+        <img  src="{{url_for('static',filename='img/nivelmaturidade.png')}}" width="600" height="500"id ="box">
+      </p>   
+      
+      <p>
+        O cenário apresentado acima se repete em muitas empresas, mas em níveis de maturidade diferentes.
+         Há empresas que usam sistemas avançados e empresas que anotam no caderninho.
+      </p>    
 
-<p>Essas ferramentas apesar de terem até o nome BI no nome, como o caso do Power BI, não são ferramentas clássicas de um mundo BI pois não necessitam da complexidade de construção de Data Marts ou até mesmo Data Warehouses. As conexões de dados podem ser realizadas em um conjunto de dados simples (por exemplo, planilhas) e efetua cruzamentos para construção de informações para análise.</p>
+      <p>
+        <b>A questão é: não há como melhorar algo que não se mede. 
+        Ou melhor, não se mede e não se observa. Só medir não resolve.</b>
+      </p> 
 
-<p>No caso do Power BI dependendo do modo de licenciamento você poderá conectar com planilhas do Excel, data warehouses locais ou até mesmo fontes de dados na Nuvem.</p>
+      <p>
+        Veja a imagem abaixo. Qual fica mais fácil de entender o quê ocorreu, 
+        antes (tabel) ou depois (gráficos)?
+      </p>
 
-<p>A ideia principal por trás dessa solução é fornecer funcionalidades de uma ferramenta OLAP clássica, mas sem a complexidade de cargas de dados passando pelo processo de ETL. Por essa facilidade vem ganhando mercado e até mesmo já tem sido exigida nos concursos, como agora no caso do DEPEN.</p>
+      <p>
+        Este é um exemplo de como nós da <a href="https://www.linkedin.com/company/smartos-br/">SmartOS</a> podemos te ajudar empresas a utilizar seus dado
+        s da melhor forma. Apenas com os horários das paradas de máquinas e seus motivos, geramos 
+        indicadores que permitem com que os gestores possam prestar atenção nos setores e motivos
+         que causam mais paradas. É a transformação de dados em informações!
+      </p>
+      
+      <p align="center">
+          <img src="{{url_for('static',filename='img/dadoschaodefabrica.png')}}"border-radius: 50%; width="700" height="400"id ="box"> 
+      </p>
+      <p>
+        Neste contexto, existem diferentes níveis de maturidade na utilização dos dados:
+      </p>
+      
+      <p>
+      <ul>
+        <li>
+          <b>Dados crus:</b> trazem baixo valor para a companhia, muitas vezes estão ainda no papel 
+          e ficam armazenados em arquivos. Sabe aquela ficha que você preenche no setor X,
+          para onde ela vai? Esses dados são analisados? Quais decisões aquela folha ajuda 
+          o gestor tomar?
+        </li>
+        <br>
+        <li>
+          <b>Informação:</b> dados começam a trazer valor, mas os relatórios não são automatizados. 
+          Cada funcionário analisa do seu seu jeito. Muitos utilizam um arquivo em Excel, 
+          sem gestão da informação, onde os dados são inseridos de qualquer jeito.
+           Caso esse funcionário saia da empresa, ninguém sabe o quê fazer e como fazer.
+        </li>
+        <br>
+        <li>
+          <b>Business Intelligence:</b> neste ponto, a empresa já entendeu a importância dos dados 
+          e utiliza ferramentas para a estruturação e organização dos dados. Utiliza sistemas
+          para entrada de dados e possui tratamento dos dados gerando indicadores de forma
+          automatizada. Aqui, a empresa encontra respostas para as perguntas como: O que 
+          aconteceu? Por quê aconteceu? Observa ocorrências do passado para trazer mais
+          eficiência aos seus processos.
+        </li>
+       <br>
+        <li>
+          <b>Análise avançada:</b> neste cenário, a empresa busca conhecimento profundo sobre os seus dados
+           e fazer análises preditivas. Aqui se aplicam conceitos como Machine Learning e 
+           Inteligência Artificial buscando responder perguntas como: O quê vai acontecer? 
+           Qual é o melhor conjunto de ações a ser tomado?
+        </li>
+      </ul>
+      </p>
 
-<p>Consultando a documentação oficial [1] , o Power Bi é dividido em algumas partes, assim descritas:</p>
- <ul>
-  <li>
-    Um aplicativo de desktop do Windows chamado Power BI Desktop.
-  </li>
-   <li>
-    Um serviço SaaS (software como serviço) online chamado de serviço do Power BI.
-  </li>
-   <li>
-  Aplicativos móveis do Power BI para dispositivos Windows, iOS e Android.
-  </li>
-   <li>
- O quarto elemento, o Servidor de Relatórios do Power BI (versão full), permite publicar relatórios do Power BI em um servidor de relatórios local, depois de criá-los no Power BI Desktop.
-  </li>
- </ul>
- <h3>Power BI Ecossistema</h3>
- <p>
-  Existe a aplicação desktop do Windows para computadores,
-  com foco no projeto e publicação de relatórios, pode ser usada offline e tem licença
-  de uso gratuito, para entender mais do licenciamento acesse a documentação [1],
-  além disso existe o servidor de relatórios que exige licenciamento específico
-  e serve de repositório para os painéis desenvolvidos, e opcionalmente a
-  aplicação para mobile, essa estrutura básica pode ser demonstrada na Figura 1.
- </p>
-<img src="{{url_for('static',filename='img/conheceopowerbi.png')}}"border-radius: 50%; width="90%" height="300"id ="box">
-<p>E na figura 2 uma visão de um dashboard desenvolvido no Power BI.</p>
-<img src="{{url_for('static',filename='img/Power-BI-2.png')}}"border-radius: 50%; width="90%" height="300"id ="box">
+      <p>
+        A sua empresa não precisa sair do zero direto para a análise avançada e nem mesmo
+        estruturar todo um banco de dados complexo para dar o primeiro passo. Eu garanto
+        que algum tipo de dado você já gera, que tal transformá-los em informação?
+        Existem profissionais capacitados e ferramentas que permitem a conexão aos
+        dados e visualização das principais informações de forma mais rápida. Uma 
+        delas é o Self-service BI com ferramentas tais como o Power BI e o Tableau. 
+      </p>
+      <p>
+        Mas isso assunto para outro post, até mais!
+      </p> 
            
- 
  {%endblock%}
        

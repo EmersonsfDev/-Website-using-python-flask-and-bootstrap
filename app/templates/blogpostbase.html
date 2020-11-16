@@ -10,83 +10,57 @@
     border-radius:7px;
     }
     </style>
-   <div class=" bg-back text-white">
-    <br><br><br><br> <br><br>
-     <div class="container">
-         <div class="row">
-          <div class="col-md-8 ">
-
-            <div class="card mb-4 text-black-50">
-               <div class="card-body">
-                  {%block blog%}
-                  {% endblock %}
-                  <a href="#" class="btn btn-success">Ver Mais &rarr;</a>
-                  </div>
-                  <div class="card-footer text-muted">
-                      Postado em 03/07/2020 16:17
-                    <a href="https://blog.grancursosonline.com.br/conhece-o-power-bi/">Washington Almeida</a>
-                  </div>
-              </div>
-     
-            <!-- Comments Form -->
-            <div class="card my-4">
-              <h5 class="card-header">Sua opinião:</h5>
-              <div class="card-body">
-                <form>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="3"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-success">Enviar</button>
-                </form>
-              </div>
+  <div class=" bg-back text-white">
+  <br><br><br><br> <br><br>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 ">
+          <div class="card mb-4 text-black-50">
+            <div class="card-body">
+              <font color="black">
+                {%block blog%}
+                {% endblock %}
+              </font>  
             </div>
-
-            <!-- Comment with nested comments -->
-            <div class="media mb-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Comentários</h5>
-              </div>
-            </div>
-
           </div>
+        </div>
 
-          <!-- Sidebar Widgets Column -->
-          <div class="col-md-4">
-                   <!-- Categories Widget -->
-            <div class="card my-4 ">
-              <h5 class="card-header" style="background-color:#742774">Tecnologia</h5>
-              <div class="card-body">
-                <div class="row">
+        
+        <div class="col-md-4">
+                  <!-- Categories Widget -->
+          <div class="card my-4 ">
+            <h5 class="card-header" style="background-color:#742774">Tecnologia</h5>
+            <div class="card-body">
+              <div class="row">
 
-                  <div class="col-lg-6">
-                    <img class="grow" src="{{url_for('static',filename='img/destaque1.png')}}"border-radius: 50%; width="200" height="100"id ="box">
+                <div class="col-lg-6">
+                  <img class="grow" src="{{url_for('static',filename='img/destaque1.png')}}"border-radius: 50%; width="200" height="100"id ="box">
+                </div>
+
+                <div class="col-lg-10">
+                  <a href="{{url_for('blogpost2')}}">Microsoft apresenta plataforma que visa tornar mais seguro o retorno ao ambiente de trabalho</a> 
                   </div>
+                <br><br>
+                <div class="col-lg-6">
+                  <img class="grow"src="{{url_for('static',filename='img/destaque2.jpg')}}"border-radius: 50%; width="200" height="100"id ="box">
+                </div>
 
-                  <div class="col-lg-10">
-                    <a href="{{url_for('blogpost2')}}">Microsoft apresenta plataforma que visa tornar mais seguro o retorno ao ambiente de trabalho</a> 
-                    </div>
-                  <br><br>
-                  <div class="col-lg-6">
-                    <img class="grow"src="{{url_for('static',filename='img/destaque2.jpg')}}"border-radius: 50%; width="200" height="100"id ="box">
-                  </div>
+                <div class="col-lg-10">
+                  <a href="{{url_for('blogpost3')}}">Power Apps, Power Automate e Power BI estão disponíveis nas novas regiões de datacenter da Microsoft na Alemanha em Frankfurt e Berlim</a> 
+              
+                </div>
 
-                  <div class="col-lg-10">
-                    <a href="{{url_for('blogpost3')}}">Power Apps, Power Automate e Power BI estão disponíveis nas novas regiões de datacenter da Microsoft na Alemanha em Frankfurt e Berlim</a> 
-                
-                  </div>
+                <br><br>
+                <div class="col-lg-6">
+                  <img class="grow"src="{{url_for('static',filename='img/pc.jpg')}}"border-radius: 50%; width="200" height="100"id ="box">
+                </div>
 
-                  <br><br>
-                  <div class="col-lg-6">
-                    <img class="grow"src="{{url_for('static',filename='img/pc.jpg')}}"border-radius: 50%; width="200" height="100"id ="box">
-                  </div>
-
-                  <div class="col-lg-10">
-                    <a href="{{url_for('blogpost')}}">It'sSeg analisa riscos de Covid-19 com Power BI</a> 
-                  </div>
+                <div class="col-lg-10">
+                  <a href="{{url_for('blogpost')}}">It'sSeg analisa riscos de Covid-19 com Power BI</a> 
                 </div>
               </div>
             </div>
+          </div>
 
             <!-- Side Widget -->
             <div class="card my-4 grow" >

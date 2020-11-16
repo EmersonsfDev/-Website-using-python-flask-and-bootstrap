@@ -8,13 +8,37 @@
         <h1 class="mt-4">Veja como Realizar filtro de Dados no PowerApps.</h1>
         <!-- Author -->
         <p class="lead">
-          by Rudimar
+          by Rudimar Althof
         </p>
 
-        <p>
-         <h2> Descricao do Asunto </h2>
-       
-        </p>
-                
+        <h2 class="mt-4">Filtrando galerias no Power Apps com a fun&ccedil;&atilde;o Search, como funciona?</h2>
+
+        <p class="lead">&nbsp;</p>
+        <p>Para localizar registros em uma fonte de dados dentro do Power Apps podemos utilizar a fun&ccedil;&atilde;o&nbsp;<strong>Search</strong>.</p>
+        <p>Ao usar a fun&ccedil;&atilde;o Search, passamos uma substring (um peda&ccedil;o de texto) que ser&aacute; checada se a mesma faz parte em cada uma das colunas informadas. Caso sim, estes ser&atilde;o inclu&iacute;dos no resultado.</p>
+        <p>Esta fun&ccedil;&atilde;o retornar&aacute; uma table que cont&eacute;m todos os registros encontrados, com as mesmas colunas da tabela original.</p>
+        <p>A fun&ccedil;&atilde;o Search possui os seguintes par&acirc;metros, todos obrigat&oacute;rios:</p>
+        <ul>
+        <li>Tabela: a fonte de dados / tabela com os dados que ser&atilde;o pesquisados;</li>
+        <li>SearchString: o trecho de texto a ser pesquisado. Caso este trecho seja branco ou vazio, a fun&ccedil;&atilde;o retornar&aacute; todos os registros;</li>
+        <li>Colunas: as colunas da tabela que ser&atilde;o pesquisadas.&nbsp;
+        <ul>
+        <li>devem conter texto</li>
+        <li>devem estar entre aspas duplas</li>
+        <li>devem ser valores est&aacute;ticos, n&atilde;o podendo ser calculados por uma f&oacute;rmula</li>
+        </ul>
+        </li>
+        </ul>
+        <p>Nesta fun&ccedil;&atilde;o, se a SearchString estiver contida dentro de qualquer uma das colunas passadas como argumento, o registro ser&aacute; retornado.</p>
+        <hr />
+        <p><strong>Importante:&nbsp;</strong>para Excel e SharePoint, os espa&ccedil;os em branco contidos nos nomes das colunas devem ser substitu&iacute;dos por "<strong>_x0020_</strong>". Exemplo: "Data de Inicio" fica "Data<strong>_x0020_</strong>de<strong>_x0020_</strong>Inicio"</p>
+        <hr />
+        <p>O card abaixo explica em detalhes como isto funciona.</p>
+        <div style="display: table-cell; vertical-align: middle; text-align: center;"><img class="Img.Center" role="img" src="{{url_for('static',filename='img/Card_PowerApps_Search.png')}}" width="60%" height="auto" /></div>
+        <hr />
+        <p>Quer aprender PowerApps mas n&atilde;o tem e-mail corporativo para criar uma conta?</p>
+        <p>Veja no v&iacute;deo abaixo como fazer.</p>
+        <p>&nbsp;<iframe src="https://www.youtube.com/embed/38frFgkm8E4" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+                        
  {%endblock%}
        
