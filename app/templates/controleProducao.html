@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
  {%block content%}
 
-<div  style="background:white">
+<div  class=" bg-rox">
   <div class="container-fluid bg-degrade">
     <div class="slider-active">
         <div class="single-slider d-flex align-items-center slider-height ">
@@ -34,8 +34,8 @@
   </div> 
 
  
-    <div  style="bg-degrade">
-        <div class="container">
+    <div>
+        <div class="container card">
             <div>
                 <hr class="featurette-divider">
                 <h1 align="center">Fique de Olho.</h1>
@@ -55,7 +55,7 @@
                 <p>Aqui podemos ver com mais detalhes algumas funções do software.</p> 
                  <hr class="featurette-divider">
                 <h1 align="center">DADOS: Aplicação para Controle de Produção</h1>
-                <img  src="{{url_for('static',filename='img/img2.png')}}" width="90%" height="400"id ="box"data-animation="fadeInRight" data-delay="1s">
+                <img  src="{{url_for('static',filename='img/img2.png')}}" width="100%" height="400"id ="box"data-animation="fadeInRight" data-delay="1s">
                 <br><br>
                 <p>Após a coleta dos dados utilizamos o Power Bi para fazer o tratamento dos mesmos integrando assim com o PowerApps(ferramenta de desenvolvimento do software).</p>
                 <p>A seguir é possível ver esses dados tratados gerando diversas informações imprencidíveis pra o gerenciamento da empresa.</p>
@@ -66,7 +66,7 @@
                 <hr class="featurette-divider">
                 <h1 align="center">Benefícios da Solução Proposta</h1>
                 <br><br>
-                <img align="center" src="{{url_for('static',filename='img/img4.png')}}" width="80%" height="400"id ="box"data-animation="fadeInRight" data-delay="1s">
+                <img align="center" src="{{url_for('static',filename='img/img4.png')}}" width="100%" height="400"id ="box"data-animation="fadeInRight" data-delay="1s">
                 <br><br>
                 <hr class="featurette-divider">
                 <h1 align="center">Destaques da Solução</h1>
@@ -78,11 +78,8 @@
             </div>
         </div>         
     </div>
-</div>
-   
-    
-         
-   
-   
-
+</div>  
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+  <script src="{{url_for('static',filename='js/scripts.js')}}"></script>
 {% endblock %}

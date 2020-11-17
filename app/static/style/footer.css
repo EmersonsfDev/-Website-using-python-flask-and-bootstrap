@@ -1,6 +1,15 @@
 .site-footer
         {
-          background-color:#26272b;
+          background: hsla(0, 0%, 7%, 1);
+
+          background: linear-gradient(180deg, hsla(0, 0%, 7%, 1) 0%, hsla(296, 100%, 6%, 1) 100%);
+
+          background: -moz-linear-gradient(180deg, hsla(0, 0%, 7%, 1) 0%, hsla(296, 100%, 6%, 1) 100%);
+
+          background: -webkit-linear-gradient(180deg, hsla(0, 0%, 7%, 1) 0%, hsla(296, 100%, 6%, 1) 100%);
+
+          filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#111111", endColorstr="#1F0021", GradientType=1 );
+                  
           padding:45px 0 20px;
           font-size:15px;
           line-height:24px;
@@ -29,7 +38,7 @@
         }
         .site-footer a:hover
         {
-          color:#3366cc;
+          color:#9509c4;
           text-decoration:none;
         }
         .footer-links
@@ -47,7 +56,7 @@
         }
         .footer-links a:active,.footer-links a:focus,.footer-links a:hover
         {
-          color:#3366cc;
+          color:#d50ee7;
           text-decoration:none;
         }
         .footer-links.inline li
